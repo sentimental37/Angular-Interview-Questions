@@ -26,6 +26,7 @@ You can configure RouterLinkActive by passing exact: true. This will add the cla
 * What is a template variable. How would you use it?
 * What is the difference of using a property binding verses a function binding on a template?
 * What happens if you subscribe to a data source multiple times with async pipe?
+It will hit the api multiple times as much times the subscribe is done. To prevent this, we can use the .share() function, where hit will be called one time and result will be shared, however, if observable is complete and after that someone calls share(), subscribe will be called again.
 * what is the difference between ng-content, ng-container and ng- template?
 * When you create a data-binding in Angular, are you working with attributes or properties? What is the difference anyway?
 
